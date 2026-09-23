@@ -3,3 +3,6 @@ app/node_modules/
 app/dist/
 .DS_Store
 *.log
+
+# raw source photo dumps (optimized copies live in app/public/images)
+WhatsApp Unknown */

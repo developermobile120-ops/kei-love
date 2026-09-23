@@ -10,16 +10,26 @@
   -webkit-tap-highlight-color: transparent;
 }
 
+html {
+  /* opaque fallback painted at the very back; the animated sky sits above it */
+  background: #0b1230;
+}
+
 html,
 body,
 #root {
   margin: 0;
   padding: 0;
   min-height: 100%;
-  background: #0b1230;
   color: #f5f1e6;
   font-family: "Inter", system-ui, sans-serif;
   overflow-x: hidden;
+}
+
+/* transparent so the fixed SkyBackground (z-index:-10) shows through */
+body,
+#root {
+  background: transparent;
 }
 
 body {
