@@ -38,7 +38,7 @@ export function AudioPlayer({ audio, silentProgress }: { audio: AudioSync; silen
           <div className="flex items-baseline justify-between gap-2">
             <span className="script truncate text-lg leading-none text-[#f6c944]">♡ Our Song</span>
             <span className="text-[10px] tabular-nums text-white/50">
-              {audio.available ? `${fmt(audio.currentTime)} / ${fmt(audio.duration)}` : "add mp3"}
+              {audio.available ? `${fmt(audio.currentTime)} / ${fmt(audio.duration)}` : "♫"}
             </span>
           </div>
           <div className="mt-1 truncate text-[11px] text-white/70">
@@ -62,11 +62,6 @@ export function AudioPlayer({ audio, silentProgress }: { audio: AudioSync; silen
           </button>
         </div>
       </div>
-      {!audio.available && (
-        <p className="hand mt-1.5 text-center text-base text-white/55">
-          drop <span className="text-white/80">love-story.mp3</span> into /public/audio — the film still plays
-        </p>
-      )}
     </motion.div>
   );
 }
